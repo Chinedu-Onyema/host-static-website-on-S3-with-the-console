@@ -3,7 +3,7 @@
 This repository contains instructions and scripts for hosting a static website using Amazon S3 and the AWS CloudShell. 
 This approach allows you to deploy your website entirely from a web browser without installing the AWS CLI on your local machine.
 
-#### PDF GUIDE: [HOSTING A STATIC WEBSITE ON AMAZON S3 USING THE AWS COMMAND LINE INTERFACE.pdf](https://github.com/user-attachments/files/32658338/4.HOSTING.A.STATIC.WEBSITE.ON.AMAZON.S3.USING.THE.AWS.COMMAND.LINE.INTERFACE.pdf)
+#### PDF GUIDE: [HOSTING A STATIC WEBSITE ON AMAZON S3 USING THE AWS CLI.pdf](https://github.com/user-attachments/files/32658338/4.HOSTING.A.STATIC.WEBSITE.ON.AMAZON.S3.USING.THE.AWS.COMMAND.LINE.INTERFACE.pdf)
 
 #### WATCH VIDEO WALKTHROUGH HERE: https://youtu.be/OIHZ5_Xy0eU
 
