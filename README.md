@@ -10,7 +10,7 @@ This approach allows you to deploy your website entirely from a web browser with
 ## PREREQUISITES
 Before you begin, ensure you have an [AWS Account](https://aws.amazon.com/).
 
-## WALKTHROGH STEPS
+## WALKTHROUGH STEPS
 Follow these steps sequentially to deploy your static website.
 
 
@@ -25,7 +25,7 @@ Click it to open the terminal. You can use any region supported by CloudShell.
 
 Create a new S3 bucket to store your website files.
 > **Note:** Bucket names must be globally unique. You must change `static-website-hosting-140023390772-bucket` to a unique name of your choice.
-<PRE>aws s3 mb s3://static-website-hosting-140023390772-bucket</PRE>
+<PRE>aws s3 mb s3://your-S3-bucket-name</PRE>
 
 
 ### Step 3: Upload Website Files to CloudShell
@@ -52,10 +52,10 @@ Select your zipped file and upload it to the CloudShell environment.
 ### Step 5: Sync Files to S3
 1) Upload the unzipped website folder contents to your S3 bucket.
 Important: Replace chinedu-onyema-website with the name of your unzipped folder, and adjust the bucket name to match the one created in Step 2.
-<PRE>aws s3 sync ./ 'chinedu-onyema-website' s3://static-website-hosting-140023390772-bucket</PRE>
+<PRE>aws s3 sync ./ 'chinedu-onyema-website' s3://your-S3-bucket-name</PRE>
 
 2) Confirm the files are in the bucket:
-<PRE>aws s3 ls s3://static-website-hosting-140023390772-bucket</PRE>
+<PRE>aws s3 ls s3://your-S3-bucket-name</PRE>
 
 
 ### Step 6: Create and Configure Bucket Policy
@@ -74,7 +74,7 @@ CRITICAL: You must replace my-static-website-bucket in the Resource line with th
 "Effect": "Allow",
 "Principal": "*",
 "Action": "s3:GetObject",
-"Resource": "arn:aws:s3:::static-website-hosting-140023390772-bucket/*"
+"Resource": "arn:aws:s3:::your-S3-bucket-name/*"
 }
 ]
 }
@@ -95,7 +95,7 @@ Press Ctrl+X to exit.
    
 ```
 aws s3api put-public-access-block \
-    --bucket static-website-hosting-140023390772-bucket \
+    --bucket your-S3-bucket-name \
     --public-access-block-configuration \
     "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"
 ```
@@ -103,7 +103,7 @@ aws s3api put-public-access-block \
 2) Attach the policy created in Step 6 to your bucket:
 ```
 aws s3api put-bucket-policy \
-    --bucket static-website-hosting-140023390772-bucket \
+    --bucket your-S3-bucket-name \
     --policy file://bucket_policy.json
 ```
 
@@ -112,12 +112,12 @@ aws s3api put-bucket-policy \
 
 Configure the bucket to serve as a static website, specifying the index and error documents.
 ```
-aws s3 website s3://static-website-hosting-140023390772-bucket \
+aws s3 website s3://your-S3-bucket-name \
     --index-document index.html \
     --error-document error.html
 ```
 
 ### Step 9: Access Your Website
 Generate the URL to view your hosted website.
-<PRE>echo http://static-website-hosting-140023390772-bucket.s3-website-eu-north-1.amazonaws.com/index.html</PRE>
+<PRE>echo http://your-S3-bucket-name.s3-website-eu-north-1.amazonaws.com/index.html</PRE>
 
