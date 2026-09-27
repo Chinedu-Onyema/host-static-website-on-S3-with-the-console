@@ -2,13 +2,13 @@
 
 This repository contains step-by-step instructions for hosting a static website directly through the AWS Management Console and AWS CLI using Amazon S3, configuring public access settings, and making your website files publicly accessible.
 
-#### PDF GUIDE FOR AWS CLI: [HOSTING A STATIC WEBSITE ON AMAZON S3 USING THE AWS CLI.pdf](https://github.com/user-attachments/files/32658338/4.HOSTING.A.STATIC.WEBSITE.ON.AMAZON.S3.USING.THE.AWS.COMMAND.LINE.INTERFACE.pdf)
-
 #### PDF GUIDE FOR CONSOLE: [HOSTING A STATIC WEBSITE ON AMAZON S3 USING THE AWS CONSOLE.pdf](https://github.com/user-attachments/files/32696905/3.HOSTING.A.STATIC.WEBSITE.ON.AMAZON.S3.USING.THE.AWS.MANAGEMENT.CONSOLE.pdf)
 
-#### WATCH VIDEO WALKTHROUGH HERE (AWS CLI): https://youtu.be/OIHZ5_Xy0eU
+#### PDF GUIDE FOR AWS CLI: [HOSTING A STATIC WEBSITE ON AMAZON S3 USING THE AWS CLI.pdf](https://github.com/user-attachments/files/32658338/4.HOSTING.A.STATIC.WEBSITE.ON.AMAZON.S3.USING.THE.AWS.COMMAND.LINE.INTERFACE.pdf)
 
 #### WATCH VIDEO WALKTHROUGH HERE (AWS CONSOLE): https://youtu.be/xRujItk6yHQ
+
+#### WATCH VIDEO WALKTHROUGH HERE (AWS CLI): https://youtu.be/OIHZ5_Xy0eU
 
 
 ## PHASE 1: HOST A STATIC WEBSITE WITH THE AWS CONSOLE
